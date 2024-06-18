@@ -1,0 +1,62 @@
+{
+  "name": "modular-quasar-starter-template",
+  "version": "0.0.1",
+  "description": "An opinionated starter template for Quasar that uses a modular approach",
+  "productName": "ModularQuasarTemplate",
+  "author": "luke.diebold@sourcedigital.net",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.ts,.vue ./",
+    "test": "pnpm test:component --browser chrome",
+    "dev": "cross-env NODE_ENV=local quasar dev -m spa",
+    "test:e2e": "cross-env NODE_ENV=test start-test \"quasar dev\" http-get://localhost:9000 \"cypress open --e2e\"",
+    "test:e2e:ci": "cross-env NODE_ENV=test start-test \"quasar dev\" http-get://localhost:9000 \"cypress run --e2e\"",
+    "test:component": "cross-env NODE_ENV=test cypress open --component",
+    "test:component:ci": "cross-env NODE_ENV=test cypress run --component"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.16.6",
+    "@vuemodel/core": "^0.0.14",
+    "@vuemodel/pinia-local-storage": "^0.0.16",
+    "@vueuse/core": "^10.4.1",
+    "augment-quasar": "^0.0.32",
+    "lodash-es": "^4.17.21",
+    "pinia": "^2.1.6",
+    "pinia-orm": "^1.7.0",
+    "pluralize": "^8.0.0",
+    "quasar": "^2.12.7",
+    "unplugin-auto-import": "^0.16.6",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@quasar/app-vite": "^1.6.2",
+    "@quasar/quasar-app-extension-testing-e2e-cypress": "^5.1.1",
+    "@types/lodash-es": "^4.17.9",
+    "@types/node": "^20.6.2",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "@unocss/preset-uno": "^0.55.7",
+    "@vue-macros/volar": "^0.13.8",
+    "autoprefixer": "^10.4.15",
+    "change-case": "^4.1.2",
+    "cypress": "^12.17.4",
+    "eslint": "^8.49.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-cypress": "^2.14.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-n": "^16.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-vue": "^9.17.0",
+    "inflection": "^2.0.1",
+    "postcss": "^8.4.29",
+    "typescript": "^5.2.2",
+    "unocss": "^0.55.7",
+    "unplugin-vue-macros": "^2.5.1"
+  },
+  "engines": {
+    "node": "^18 || ^16 || ^14.19",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}
